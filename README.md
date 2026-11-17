@@ -1,4 +1,23 @@
-# Setting up Uno Platform project to create a Windows WinUI3 App
+# Content Table
+1. [Introduction](#introduction)
+2. [What is WinUI3](#what-is-winui3)
+3. [What is Uno Platform](#what-is-uno-platform)
+4. [Step-by-Step Guide: Creating a WinUI Project with Uno Platform](#step-by-step-guide-creating-a-winui-project-with-uno-platform)
+    1. [Prerequisites](#1-prerequisites)
+    2. [Install the Uno Platform Extension](#2-install-the-uno-platform-extension)
+    3. [Create a New Uno Platform Project](#3-create-a-new-uno-platform-project)
+    4. [Configure the Project](#4-configure-the-project)
+    5. [Understand the Project Structure](#5-understand-the-project-structure)
+    6. [Create a Simple WinUI Interface](#6-create-a-simple-winui-interface)
+    7. [Build the Project](#7-build-the-project)
+    8. [Run the WinUI Application](#8-run-the-winui-application)
+    9. [Run the Application on Other Platforms](#9-run-the-application-on-other-platforms-optional)
+    10. [Useful Resources](#10-useful-resources)
+    11. [Summary](#summary)
+5. [Setting up the Windows application](#setting-up-the-windows-application)
+
+
+# Introduction
 
 <p> This repository will help programmers set up the your <b>Uno Platform</b> project to create Windows 11 apps using the Fluent Design </p>
 
@@ -16,7 +35,7 @@
 
 <p>More about Uno Platform on <a href="https://platform.uno/docs/articles/what-is-uno.html" >Uno Platform - About</a> </p>
 
-#
+
 # Step-by-Step Guide: Creating a WinUI Project with Uno Platform
 
 Uno Platform allows you to build cross-platform applications using **C#, .NET, and XAML**, while using WinUI-style APIs and controls.
@@ -221,4 +240,20 @@ The overall process is:
 8. Run the application on Windows.
 
 **The key advantage:** You can develop using WinUI-compatible XAML and C# while retaining the option to expand your application to other platforms without rewriting the entire UI.
+
+# Setting up the Windows application
+## Mica backdrop
+On the `App.xaml.cs`, navigate to `line 87` 
+``` text
+87    MainWindow = builder.Window;
+```
+
+Add these lines of code underneath it 
+```text
+CurrentWindow = MainWindow;
+        MainWindow.SystemBackdrop = new MicaBackdrop
+        {
+            Kind = MicaKind.Base
+        };
+```
 
