@@ -1,0 +1,109 @@
+<Project Sdk="Uno.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net10.0-windows10.0.26100</TargetFrameworks>
+
+    <OutputType>Exe</OutputType>
+    <UnoSingleProject>true</UnoSingleProject>
+
+    <!-- Display name -->
+    <ApplicationTitle>DevManUno</ApplicationTitle>
+    <!-- App Identifier -->
+    <ApplicationId>com.companyname.DevManUno</ApplicationId>
+    <!-- Versions -->
+    <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+    <ApplicationVersion>1</ApplicationVersion>
+    <!-- Package Publisher -->
+    <ApplicationPublisher>HP</ApplicationPublisher>
+    <!-- Package Description -->
+    <Description>DevManUno powered by Uno Platform.</Description>
+    <!--
+      If you encounter this error message:
+
+        error NETSDK1148: A referenced assembly was compiled using a newer version of Microsoft.Windows.SDK.NET.dll.
+        Please update to a newer .NET SDK in order to reference this assembly.
+
+      This means that the two packages below must be aligned with the "build" version number of
+      the "Microsoft.Windows.SDK.BuildTools" package above, and the "revision" version number
+      must be the highest found in https://www.nuget.org/packages/Microsoft.Windows.SDK.NET.Ref.
+    -->
+    <!-- <WindowsSdkPackageVersion>10.0.22621.28</WindowsSdkPackageVersion> -->
+
+    <!--
+      UnoFeatures are used to quickly add and manage features enabled for your app.
+      https://aka.platform.uno/singleproject-features
+    -->
+    <UnoFeatures>
+      Hosting;
+      Toolkit;
+      Logging;
+      MVUX;
+      Configuration;
+      HttpKiota;
+      Serialization;
+      Localization;
+      Navigation;
+      ThemeService;
+      Skia;
+    </UnoFeatures>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Remove="Assets\icons8-battery-96.png" />
+    <Content Remove="Assets\Icons\icons8-audio-48.png" />
+    <Content Remove="Assets\Icons\icons8-battery-48.png" />
+    <Content Remove="Assets\Icons\icons8-biometrics-48.png" />
+    <Content Remove="Assets\Icons\icons8-bluetooth-48.png" />
+    <Content Remove="Assets\Icons\icons8-camera-48.png" />
+    <Content Remove="Assets\Icons\icons8-computer-48.png" />
+    <Content Remove="Assets\Icons\icons8-hdd-48.png" />
+    <Content Remove="Assets\Icons\icons8-keyboard-48.png" />
+    <Content Remove="Assets\Icons\icons8-memory-slot-100.png" />
+    <Content Remove="Assets\Icons\icons8-microchip-48.png" />
+    <Content Remove="Assets\Icons\icons8-processor-100.png" />
+    <Content Remove="Assets\Icons\icons8-video-card-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Presentation\ProList.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.WinUI.Controls.SettingsControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Assets\icons8-battery-96.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\Icons\icons8-battery-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\Icons\icons8-biometrics-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\Icons\icons8-bluetooth-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\Icons\icons8-camera-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\Icons\icons8-hdd-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\Icons\icons8-keyboard-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\Icons\icons8-memory-slot-100.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\Icons\icons8-microchip-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\Icons\icons8-processor-100.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\Icons\icons8-video-card-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Page Update="Presentation\ProList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+</Project>
