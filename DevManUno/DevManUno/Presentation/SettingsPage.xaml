@@ -1,0 +1,116 @@
+﻿<Page
+    x:Class="DevManUno.Presentation.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DevManUno.Presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:CommunityToolkit.WinUI.Controls"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Padding="10 30 10 10" Margin="5">
+        <ScrollViewer>
+            <StackPanel Spacing="10">
+                <TextBlock Text="Settings" FontSize="26" FontWeight="Bold" />
+
+                <TextBlock Text="Apperance" FontSize="16" Margin="0 20 0 0" />
+
+                <controls:SettingsCard Header="App Themes" Description="Change the application theme" >
+                    <controls:SettingsCard.HeaderIcon>
+                        <FontIcon Glyph="&#xE790;" FontSize="20" />
+                    </controls:SettingsCard.HeaderIcon>
+
+                    <controls:SettingsCard.Content>
+                        <ComboBox SelectedIndex="0">
+                            <ComboBoxItem Content="Auto" />
+                            <ComboBoxItem Content="Dark" />
+                            <ComboBoxItem Content="Light" />
+                        </ComboBox>
+                    </controls:SettingsCard.Content>
+                </controls:SettingsCard>
+
+                <controls:SettingsCard Header="Backdrop" Description="Change the application backdrop" >
+                    <controls:SettingsCard.HeaderIcon>
+                        <FontIcon Glyph="&#xEB42;" FontSize="20" />
+                    </controls:SettingsCard.HeaderIcon>
+
+                    <controls:SettingsCard.Content>
+                        <ComboBox SelectedIndex="0">
+                            <ComboBoxItem Content="Mica" />
+                            <ComboBoxItem Content="MicaAlt" />
+                            <ComboBoxItem Content="Acrylic" />
+                        </ComboBox>
+                    </controls:SettingsCard.Content>
+                </controls:SettingsCard>
+
+                <controls:SettingsExpander Header="Font Appearance" Description="Change the font apperance">
+                    <controls:SettingsExpander.HeaderIcon>
+                        <FontIcon Glyph="&#xE8D2;" FontSize="20" />
+                    </controls:SettingsExpander.HeaderIcon>
+
+                    <controls:SettingsExpander.Items>
+                        <controls:SettingsCard Header="Font Family">
+                            <controls:SettingsCard.Content>
+                                <ComboBox SelectedIndex="0">
+                                    <ComboBoxItem Content="Arail" />
+                                    <ComboBoxItem Content="Seoge Font" />
+                                    <ComboBoxItem Content="Comic Sans" />
+                                </ComboBox>
+                            </controls:SettingsCard.Content>
+                        </controls:SettingsCard>
+
+                        <controls:SettingsCard Header="Font Size">
+                            <controls:SettingsCard.Content>
+                                <ComboBox SelectedIndex="0">
+                                    <ComboBoxItem Content="4" />
+                                    <ComboBoxItem Content="8" />
+                                    <ComboBoxItem Content="12" />
+                                    <ComboBoxItem Content="16" />
+                                    <ComboBoxItem Content="20" />
+                                    <ComboBoxItem Content="24" />
+                                </ComboBox>
+                            </controls:SettingsCard.Content>
+                        </controls:SettingsCard>
+
+                        <controls:SettingsCard Header="Font Weight">
+                            <controls:SettingsCard.Content>
+                                <ComboBox SelectedIndex="0">
+                                    <ComboBoxItem Content="Bold" />
+                                    <ComboBoxItem Content="Italic" />
+                                    <ComboBoxItem Content="Strong" />
+                                </ComboBox>
+                            </controls:SettingsCard.Content>
+                        </controls:SettingsCard>
+                    </controls:SettingsExpander.Items>
+                </controls:SettingsExpander>
+
+
+                <TextBlock Text="About" FontSize="16" Margin="0 20 0 0" />
+
+                <controls:SettingsExpander Header="About this program">
+                    <controls:SettingsExpander.Content>
+                        <TextBlock Text="Version 1.0.0" Opacity="0.6" />
+                    </controls:SettingsExpander.Content>
+
+                    <controls:SettingsExpander.Items>
+                        <controls:SettingsCard Header="This application shows how to integrate the NavigationView control into the titlebar" />
+
+                        <controls:SettingsCard Header="Github">
+                            <controls:SettingsCard.Content>
+                                <HyperlinkButton Content="Ajjan90 Github" NavigateUri="https://github.com/Ajjan90" />
+                            </controls:SettingsCard.Content>
+                        </controls:SettingsCard>
+
+                        <controls:SettingsCard Header="Project Repostory">
+                            <controls:SettingsCard.Content>
+                                <HyperlinkButton Content="Project" NavigateUri="https://github.com/Ajjan90/Uno-WinUI3-Setup" />
+                            </controls:SettingsCard.Content>
+                        </controls:SettingsCard>
+
+                    </controls:SettingsExpander.Items>
+                </controls:SettingsExpander>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

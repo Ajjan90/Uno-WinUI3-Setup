@@ -47,61 +47,18 @@
     </UnoFeatures>
   </PropertyGroup>
   <ItemGroup>
-    <Content Remove="Assets\icons8-battery-96.png" />
-    <Content Remove="Assets\Icons\icons8-audio-48.png" />
-    <Content Remove="Assets\Icons\icons8-battery-48.png" />
-    <Content Remove="Assets\Icons\icons8-biometrics-48.png" />
-    <Content Remove="Assets\Icons\icons8-bluetooth-48.png" />
-    <Content Remove="Assets\Icons\icons8-camera-48.png" />
-    <Content Remove="Assets\Icons\icons8-computer-48.png" />
-    <Content Remove="Assets\Icons\icons8-hdd-48.png" />
-    <Content Remove="Assets\Icons\icons8-keyboard-48.png" />
-    <Content Remove="Assets\Icons\icons8-memory-slot-100.png" />
-    <Content Remove="Assets\Icons\icons8-microchip-48.png" />
-    <Content Remove="Assets\Icons\icons8-processor-100.png" />
-    <Content Remove="Assets\Icons\icons8-video-card-48.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Remove="Presentation\ProList.xaml" />
+    <None Remove="Presentation\SettingsPage.xaml" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="CommunityToolkit.WinUI.Controls.SettingsControls" />
   </ItemGroup>
   <ItemGroup>
-    <None Update="Assets\icons8-battery-96.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Assets\Icons\icons8-battery-48.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Assets\Icons\icons8-biometrics-48.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Assets\Icons\icons8-bluetooth-48.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Assets\Icons\icons8-camera-48.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Assets\Icons\icons8-hdd-48.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Assets\Icons\icons8-keyboard-48.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Assets\Icons\icons8-memory-slot-100.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Assets\Icons\icons8-microchip-48.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Assets\Icons\icons8-processor-100.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Assets\Icons\icons8-video-card-48.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <Page Update="Presentation\ProList.xaml">
+    <Page Update="Presentation\SettingsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Presentation\HomePage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>

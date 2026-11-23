@@ -12,16 +12,15 @@
     <Grid Padding="10 30 10 10" Margin="5">
         <ScrollViewer>
             <StackPanel Spacing="10">
-                <TextBlock Text="Processors" FontSize="20" FontWeight="Bold" />
+                <TextBlock Text="Home" FontSize="26" FontWeight="Bold" />
 
-                <controls:SettingsCard IsClickEnabled="True">
-                    <controls:SettingsCard.Header>
-                        <StackPanel Orientation="Horizontal" Spacing="10">
-                            <Image Source="/Assets/Icons/icons8-processor-100.png" Width="35" Height="35" Stretch="Uniform"/>
-                            <TextBlock Text="13th Gen Intel(R) Core(TM) i5-1335U" VerticalAlignment="Center" FontSize="16"/>
-                        </StackPanel>
-                    </controls:SettingsCard.Header>
-                </controls:SettingsCard>
+                <TextBlock Text="Basic Additions (1+1=2)" Opacity="0.6" Margin="0 20 0 0" />
+                <NumberBox x:Name="NumBox1" Header="Enter an number:" Value="0" PlaceholderText="00" />
+                <NumberBox x:Name="NumBox2" Header="Enter an number:" Value="0" PlaceholderText="00" />
+
+                <Button x:Name="OperateBtn" Content="Add" Background="{ThemeResource AccentFillColorDefaultBrush}" Foreground="{ThemeResource ButtonForegroundThemeBrush}" Click="OperateBtn_Click" />
+
+                <TextBlock x:Name="ResultTxt" Text="0" Opacity="0.9" />
             </StackPanel>
         </ScrollViewer>
     </Grid>

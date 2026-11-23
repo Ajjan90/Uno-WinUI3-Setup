@@ -32,10 +32,13 @@ public sealed partial class MainPage : Page
     {
         if (args.SelectedItemContainer is NavigationViewItem selectedItem)
         {
-            switch (selectedItem.Tag)
+            switch (selectedItem.Content) // or you can use selectedItem.Tag
             {
-                case "Processors":
+                case "Home":
                     ContentFrame.Navigate(typeof(Presentation.ProList));
+                    break;
+                case "Settings":
+                    ContentFrame.Navigate(typeof(Presentation.SettingsPage));
                     break;
             }
         }
