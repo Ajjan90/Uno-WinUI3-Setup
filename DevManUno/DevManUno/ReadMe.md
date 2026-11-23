@@ -1,7 +1,6 @@
-# Getting Started
+# Setting a NavigationView Window
 
-Welcome to the Uno Platform!
+If you want your window to look like this
 
-To discover how to get started with your new app: https://aka.platform.uno/get-started
+Image here
 
-For more information on how to use the Uno.Sdk or upgrade Uno Platform packages in your solution: https://aka.platform.uno/using-uno-sdk
