@@ -1,3 +1,5 @@
+# Work In Progress.....
+
 # Content Table
 1. [Introduction](#introduction)
 2. [What is WinUI3](#what-is-winui3)
@@ -257,3 +259,17 @@ CurrentWindow = MainWindow;
         };
 ```
 
+# Window design
+## Mica backdrop
+
+<p>To implement the **Mica Backdrop** of your Window, you can see the <a href="https://github.com/Ajjan90/Uno-WinUI3-Setup/blob/main/Winui-Uno-project/WinuiUno/WinuiUno/ReadMe.md">WinuiUno Documentation</a> </p>
+
+
+## Extended Titlebar
+
+<p>To implement an **Extended Titlebar** to implement custom controls like textboxes, textblocks, while providing dragable window, you can see the <a href="https://github.com/Ajjan90/Uno-WinUI3-Setup/blob/main/Winui-Uno-project/WinuiUno/WinuiUno/ReadMe.md">WinuiUno Documentation</a> </p>
+
+
+## Integrated NavigationView
+
+<p>To implement the **Mica Backdrop** of your Window, you can see the <a href="https://github.com/Ajjan90/Uno-WinUI3-Setup/blob/main/Winui-Uno-project/WinuiUno/WinuiUno/ReadMe.md">WinuiUno Documentation</a> </p>
