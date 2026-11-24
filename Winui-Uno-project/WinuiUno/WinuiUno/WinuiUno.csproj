@@ -47,30 +47,12 @@
     </UnoFeatures>
   </PropertyGroup>
   <ItemGroup>
-    <Content Remove="Assets\DIMSico.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Remove="Presentation\Pages\Audio1.xaml" />
-    <None Remove="Presentation\Pages\CanPage.xaml" />
-    <None Remove="Presentation\Pages\SettingsPage.xaml" />
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="CommunityToolkit.WinUI.Controls.SettingsControls" />
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Presentation\Pages\CanPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="Presentation\Pages\SettingsPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="Presentation\Pages\Audio1.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
+    <UnoIcon Update="Assets\Icons\icon.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </UnoIcon>
   </ItemGroup>
 
 </Project>

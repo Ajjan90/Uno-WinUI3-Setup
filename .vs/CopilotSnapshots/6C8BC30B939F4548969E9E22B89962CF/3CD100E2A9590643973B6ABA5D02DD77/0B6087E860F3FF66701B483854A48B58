@@ -1,0 +1,165 @@
+﻿<Page
+    x:Class="WinuiUno.Presentation.Pages.ScreenshotViewerPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WinuiUno.Presentation.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Padding="20" ColumnSpacing="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Screenshot gallery -->
+        <Grid Grid.Column="0" RowSpacing="12">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" Spacing="4">
+                <TextBlock
+                    Text="Screenshots"
+                    FontSize="24"
+                    FontWeight="SemiBold" />
+
+                <TextBlock
+                    x:Name="ScreenshotCount"
+                    Text="Loading screenshots..."
+                    Opacity="0.6" />
+            </StackPanel>
+
+            <Grid Grid.Row="1">
+                <GridView
+                    x:Name="ScreenshotGrid"
+                    SelectionMode="Single"
+                    IsItemClickEnabled="False"
+                    SelectionChanged="ScreenshotGrid_SelectionChanged"
+                    ScrollViewer.VerticalScrollBarVisibility="Auto">
+
+                    <GridView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <ItemsWrapGrid
+                                Orientation="Horizontal"
+                                ItemWidth="145"
+                                ItemHeight="125" />
+                        </ItemsPanelTemplate>
+                    </GridView.ItemsPanel>
+
+                    <GridView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid RowSpacing="5">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="95" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+
+                                <Border
+                                    Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+                                    CornerRadius="8"
+                                    Padding="4">
+
+                                    <Image
+                                        Source="{Binding Thumbnail}"
+                                        Stretch="Uniform"
+                                        HorizontalAlignment="Stretch"
+                                        VerticalAlignment="Stretch" />
+                                </Border>
+
+                                <TextBlock
+                                    Grid.Row="1"
+                                    Text="{Binding FileName}"
+                                    TextTrimming="CharacterEllipsis"
+                                    FontSize="11"
+                                    Opacity="0.7" />
+                            </Grid>
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                </GridView>
+
+                <StackPanel
+                    x:Name="EmptyState"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Spacing="10"
+                    Visibility="Collapsed">
+
+                    <FontIcon
+                        Glyph="&#xE8A5;"
+                        FontSize="40"
+                        Opacity="0.4"
+                        HorizontalAlignment="Center" />
+
+                    <TextBlock
+                        Text="No screenshots found"
+                        FontSize="16"
+                        FontWeight="SemiBold"
+                        HorizontalAlignment="Center" />
+
+                    <TextBlock
+                        Text="Screenshots will appear here."
+                        Opacity="0.6"
+                        HorizontalAlignment="Center" />
+                </StackPanel>
+            </Grid>
+
+            <Button
+                Grid.Row="2"
+                Content="Refresh"
+                HorizontalAlignment="Left"
+                Click="Refresh_Click" />
+        </Grid>
+
+        <!-- Image preview -->
+        <Grid Grid.Column="1" RowSpacing="12">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" Spacing="4">
+                <TextBlock
+                    Text="Preview"
+                    FontSize="24"
+                    FontWeight="SemiBold" />
+
+                <TextBlock
+                    x:Name="SelectedFileName"
+                    Text="Select a screenshot"
+                    Opacity="0.6" />
+            </StackPanel>
+
+            <Border
+                Grid.Row="1"
+                Background="{ThemeResource CardBackgroundFillColorSecondaryBrush}"
+                CornerRadius="12"
+                Padding="12">
+
+                <Image
+                    x:Name="PreviewImage"
+                    Stretch="Uniform" />
+            </Border>
+
+            <StackPanel
+                Grid.Row="2"
+                Orientation="Horizontal"
+                Spacing="10"
+                HorizontalAlignment="Right">
+
+                <Button
+                    Content="Open"
+                    Click="Open_Click" />
+
+                <Button
+                    Content="Open Folder"
+                    Click="OpenFolder_Click" />
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

@@ -16,12 +16,10 @@ public sealed partial class MainPage : Page
             }
 
             var dragRect = new Windows.Graphics.RectInt32(
-                0,
-                0,
-                (int)AppTitleBar.ActualWidth,
-                48);
+                0, 0, // Set the position of the Titlebar
+                (int)AppTitleBar.ActualWidth, 48); // Set the size of the Titlebar
 
-            appWindow.TitleBar.SetDragRectangles(new[] { dragRect });
+            appWindow.TitleBar.SetDragRectangles(new[] { dragRect }); // Apply the dragable function into the titlebar
         };
 #endif
 

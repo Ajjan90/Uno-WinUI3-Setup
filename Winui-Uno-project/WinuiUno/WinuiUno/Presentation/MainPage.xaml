@@ -24,8 +24,8 @@
                 </Grid.ColumnDefinitions>
 
                 <StackPanel Grid.Column="0" Orientation="Horizontal" Spacing="10" VerticalAlignment="Center">
-                    <Image Source="ms-appx:///Assets/DIMSico.png" Width="20" Height="20" Stretch="Uniform" ToolTipService.ToolTip="WinuiUno" />
-                    <TextBlock Text="WinuiUno" VerticalAlignment="Center" FontWeight="SemiBold" />
+                    <Image Source="/Assets/Icons/icon.svg" Width="20" Height="20" Stretch="Uniform" ToolTipService.ToolTip="WinuiUno" />
+                    <TextBlock Text="WinuiUno" VerticalAlignment="Center"/>
 
                     <MenuBar>
                         <MenuBarItem Title="File">
@@ -74,36 +74,7 @@
             </Grid>
         </Border>
 
-        <NavigationView x:Name="NavViewMenu" Grid.Row="1"
-                        IsPaneOpen="True"
-                        IsSettingsVisible="True"
-                        IsBackButtonVisible="Visible" SelectionChanged="NavigationView_SelectionChanged">
-            <NavigationView.MenuItems>
-                <NavigationViewItem Content="Audio" Icon="Audio">
-                    <NavigationViewItem.InfoBadge>
-                        <InfoBadge  Style="{StaticResource AttentionDotInfoBadgeStyle}" />
-                    </NavigationViewItem.InfoBadge>
-                    <NavigationViewItem.MenuItems>
-                        <NavigationViewItem Content="Microphone (Steam Streaming Microphone)" Icon="Audio" >
-                            <NavigationViewItem.InfoBadge>
-                                <InfoBadge Value="5" Style="{StaticResource CriticalDotInfoBadgeStyle}" />
-                            </NavigationViewItem.InfoBadge>
-                        </NavigationViewItem>
-                        <NavigationViewItem Content="Microphone (Steam Streaming Microphone)" Icon="Audio" />
-                        <NavigationViewItem Content="Microphone (Steam Streaming Microphone)" Icon="Audio" />
-                    </NavigationViewItem.MenuItems>
-                </NavigationViewItem>
-
-                <NavigationViewItem Content="Canvas" Icon="Home" />
-                <NavigationViewItem Content="Home" Icon="Home" />
-                <NavigationViewItem Content="Home" Icon="Home" />
-            </NavigationView.MenuItems>
-
-            <NavigationView.FooterMenuItems>
-                <NavigationViewItem Content="Updates" Icon="Refresh" />
-            </NavigationView.FooterMenuItems>
-
-            <Frame x:Name="ContentFrame" />
-        </NavigationView>
+        <TextBlock Grid.Row="1" Text="Hello World!" FontFamily="Comic Sans MS" FontSize="24" FontWeight="ExtraBlack"
+                   Padding="10" Margin="10" />
     </Grid>
 </Page>
